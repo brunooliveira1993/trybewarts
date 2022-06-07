@@ -19,3 +19,12 @@ main {
     width: 675px;
     flex-direction: column;
 }
+
+.trybewarts-login {
+    display: flex;
+    align-items: center;
+}
+
+#trybewarts-forms-logo {
+    height: 500px;
+}
