@@ -10,18 +10,13 @@ loginBtn.addEventListener('click', () => {
   }
 });
 
-const digito = document.getElementById('text-area');
+const digito = document.querySelector('#textarea');
+const maxChars = 500;
+const contador = document.querySelector('#counter');
 
-digito.addEventListener('keypress', (event) => {
+digito.addEventListener('input', (event) => {
   const input = digito.value.length;
-  const maxChars = 500;
-  const contador = document.getElementById('counter');
-
-  contador.innerHTML = maxChars - digito.textLength;
-
-  if (input >= maxChars) {
-    event.preventDefault();
-  }
+  contador.innerText = maxChars - input
 });
 
 const check = document.getElementById('agreement');
@@ -32,13 +27,3 @@ check.addEventListener('click', () => {
     buttonOn.disabled = false;
   }
 });
-
-// contaCaracteres(campo){
-//   var maxChar = 500;
-//   var input = campo.value.length;
-//   var maxlength = document.getElementById('text-area').setAttribute('maxlength', maxChar)
-//   var contador = document.getElementById('counter')
-//   var charNumber = maxChar - input
-//   contador.innerHTML = charNumber
-
-// }

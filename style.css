@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 header img {
   width: 8%;
   height: 8%;
@@ -5,12 +10,19 @@ header img {
 
 main {
   display: flex;
+  padding: 30px;
+}
+
+header h1 {
+  font-size: 80px;
+  color: aliceblue;
 }
 
 .header {
   background-color: rgb(50, 167, 145);
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .trybewarts-login {
@@ -31,4 +43,9 @@ main {
 #label-radio {
   display: flex;
   flex-direction: column;
+}
+
+#name-lastname {
+  width: 800px;
+  /* background-color: aqua; */
 }
