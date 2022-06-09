@@ -14,9 +14,9 @@ const digito = document.querySelector('#textarea');
 const maxChars = 500;
 const contador = document.querySelector('#counter');
 
-digito.addEventListener('input', (event) => {
+digito.addEventListener('input', () => {
   const input = digito.value.length;
-  contador.innerText = maxChars - input
+  contador.innerText = maxChars - input;
 });
 
 const check = document.getElementById('agreement');
