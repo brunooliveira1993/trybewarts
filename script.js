@@ -27,3 +27,52 @@ check.addEventListener('click', () => {
     buttonOn.disabled = false;
   }
 });
+
+const dataForm = document.getElementById('form-data');
+const formulario = document.getElementById('evaluation-form');
+const main = document.getElementById('main');
+const family = document.getElementsByName('family');
+const rateValue = document.getElementsByName('rate');
+const materiaMark = document.getElementsByClassName('subject');
+
+formulario.addEventListener('submit', (event) => {
+  event.preventDefault();
+  formulario.style.display = 'none'
+  const name = document.getElementById('input-name').value + ' ' + document.getElementById('input-lastname').value;
+  const email = document.getElementById('input-email').value;
+  const casa = document.getElementById('house').value;
+
+  let familyName = '';
+  for (i = 0; i < family.length; i += 1) {
+    if (family[i].checked === true) {
+      familyName = family[i].value;
+    };
+  };
+
+  let materia = '';
+  for (i2 = 0; i2 < materiaMark.length; i2 += 1) {
+    if (materiaMark[i2].checked === true) {
+      materia = materia + materiaMark[i2].value + ', ';
+      console.log(materia);
+    };
+  };
+
+  materia = materia.substring(0, materia.length - 4);
+
+  let rate = '';
+  for (i3 = 0; i3 < rateValue.length; i3 += 1) {
+    if (rateValue[i3].checked === true) {
+      rate = rateValue[i3].value;
+    };
+  };
+
+  const obs = digito.value;
+
+  dataForm.innerText = `Nome: ${name}
+  Email: ${email}
+  Casa: ${casa}
+  Família: ${familyName}
+  Matérias: ${materia}
+  Avaliação: ${rate}
+  Observações: ${obs}`;
+});

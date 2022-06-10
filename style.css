@@ -3,6 +3,10 @@
   margin-bottom: 10px;
 }
 
+.displaynone {
+  display: none;
+}
+
 header img {
   width: 8%;
   height: 8%;

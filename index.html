@@ -23,7 +23,8 @@
 
   </header>
 
-  <main>
+  <main id="main">
+    <p id="form-data"></p>
     <form action="" id="evaluation-form">
       <label id="name-lastname">
         <input type="text" name="" id="input-name" placeholder="Nome">
@@ -39,10 +40,10 @@
         </select>
       </label>
       <label id="label-radio">
-        <label for="" id="label-family">Qual sua família?</label>
-        <input type="radio" name="family" id="" value="Frontend">Frontend
-        <input type="radio" name="family" id="" value="Backend">Backend
-        <input type="radio" name="family" id="" value="FullStack">FullStack
+        <label for="family" id="label-family">Qual sua família?</label>
+        <input type="radio" name="family" id="Frontend" value="Frontend">Frontend
+        <input type="radio" name="family" id="Backend" value="Backend">Backend
+        <input type="radio" name="family" id="FullStack" value="FullStack">FullStack
       </label>
       <label for="" id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
       <label for="">
@@ -79,7 +80,7 @@
 
     <img src="./images/trybewarts-colored.svg" alt="" id="trybewarts-forms-logo">
   </main>
-  
+
   <footer>Direitos reservados à Trybewarts©
   </footer>
   <script src="script.js"></script>
