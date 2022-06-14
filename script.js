@@ -11,7 +11,6 @@ loginBtn.addEventListener('click', () => {
 });
 
 const digito = document.querySelector('#textarea');
-const obs = digito.value;
 const maxChars = 500;
 const contador = document.querySelector('#counter');
 
@@ -69,6 +68,8 @@ formulario.addEventListener('submit', (event) => {
       rate = rateValue[i3].value;
     }
   }
+
+  const obs = digito.value;
 
   dataForm.innerText = `Nome: ${name}
   Email: ${email}
