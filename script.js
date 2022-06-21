@@ -37,45 +37,47 @@ const inputNameId = document.getElementById('input-name');
 const inputLastNameId = document.getElementById('input-lastname');
 const inputEmailId = document.getElementById('input-email');
 const houseId = document.getElementById('house');
+let familyName = '';
+let materia = '';
+let rate = '';
 
 formulario.addEventListener('submit', (event) => {
   event.preventDefault();
   formulario.style.display = 'none';
-  const name = `${inputNameId.value} ${inputLastNameId.value}`;
-  const email = inputEmailId.value;
-  const casa = houseId.value;
-
-  let familyName = '';
   for (let i = 0; i < family.length; i += 1) {
     if (family[i].checked === true) {
       familyName = family[i].value;
     }
   }
-
-  let materia = '';
+});
+formulario.addEventListener('submit', () => {
   for (let i2 = 0; i2 < materiaMark.length; i2 += 1) {
     if (materiaMark[i2].checked === true) {
       materia = `${materia + materiaMark[i2].value}, `;
       console.log(materia);
     }
   }
-
+});
+formulario.addEventListener('submit', () => {
   materia = materia.substring(0, materia.length - 4);
-
-  let rate = '';
   for (let i3 = 0; i3 < rateValue.length; i3 += 1) {
     if (rateValue[i3].checked === true) {
       rate = rateValue[i3].value;
     }
   }
+});
 
+// correções
+formulario.addEventListener('submit', () => {
   const obs = digito.value;
-
+  const name = `${inputNameId.value} ${inputLastNameId.value}`;
+  const email = inputEmailId.value;
+  const casa = houseId.value;
   dataForm.innerText = `Nome: ${name}
-  Email: ${email}
-  Casa: ${casa}
-  Família: ${familyName}
-  Matérias: ${materia}
-  Avaliação: ${rate}
-  Observações: ${obs}`;
+Email: ${email}
+Casa: ${casa}
+Família: ${familyName}
+Matérias: ${materia}
+Avaliação: ${rate}
+Observações: ${obs}`;
 });
